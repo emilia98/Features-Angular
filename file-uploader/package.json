@@ -1,0 +1,20 @@
+{
+  "name": "file-uploader",
+  "version": "0.0.1",
+  "description": "File Uploader frm Angular App to A Cloud Storage",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Emilia Nedyalkova",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "cloudinary": "1.11.0",
+    "colors": "1.3.1",
+    "cors": "2.8.4",
+    "express": "4.16.3",
+    "mongoose": "5.2.6",
+    "multer": "^1.3.1"
+  }
+}

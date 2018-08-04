@@ -1,0 +1,50 @@
+<div *ngIf="error" class="row alert alert-danger">
+        {{error}}
+    </div>
+<div class="row text-center">
+    
+    <form [formGroup]="uploadForm" action="#" (submit)="clicked()" id="formi">
+        <div class="form-group row">
+            <label for="title" class="col-2 col-form-label">Title</label>
+            <div class="col-10">
+                <input class="form-control" type="text" id="title" formControlName="title">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="alt" class="col-2 col-form-label">alt</label>
+            <div class="col-10">
+                <input class="form-control" type="text" id="alt" formControlName="alt">
+            </div>
+        </div>
+        <div class="file-field form-group row">
+            <div class="btn btn-primary btn-large float-left">
+                <span>Choose files</span>
+                <input (change)="onFilesSelected($event)" type="file" multiple>
+            </div>
+        </div>
+
+        <div>
+            {{uploadForm.get('title').value}}
+        </div>
+        <div>
+            {{alt.value}}
+        </div>
+
+
+        <button type="submit" class="btn btn-info btn-large">Submit</button>
+    </form>
+</div>
+
+
+<div class="row text-center text-lg-left">
+
+    <div *ngIf="!images">
+        upload up to 12 images
+    </div>
+    <div *ngFor="let value of readonly;let i=index" class="col-lg-3 col-md-4 col-xs-6">
+        <a href="#" class="d-block mb-4 h-100">
+            <img *ngIf="images[i]" class="img-fluid img-thumbnail" src="{{images[i]}}" alt="">
+            <img *ngIf="images[i] === undefined" class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+        </a>
+    </div>
+</div>
