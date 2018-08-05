@@ -1,0 +1,90 @@
+/* CSS used here will be applied after bootstrap.css */
+#image-preview{
+    margin-top: 20px;
+}
+.item .thumb {
+	width: 30%;
+	cursor: pointer;
+	float: left;
+	margin: 0 1%;
+}
+.item .thumb img {
+	width: 100%;
+	margin: 2px;
+}
+.item img {
+	width: 100%;	
+}
+
+.slider-control {
+	color: black;
+}
+
+.arrow-left {
+	position: absolute;
+
+	left: 0%;
+}
+.arrow-right {
+	position: absolute;
+	
+	right: 0%;
+}
+.arrow-button {
+	border: none;
+display: inline-block;
+/* padding: 8px 16px; */
+vertical-align: middle;
+overflow: hidden;
+text-decoration: none;
+text-align: center;
+cursor: pointer;
+white-space: nowrap;
+color: #000 !important;
+background-color: transparent !important;
+font-size: 2.5rem;
+line-height: 2.5rem;
+height: 100%;
+}
+
+.custom-slider {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#slider {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 2s forwards;
+    -webkit-animation: slide-in 2s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+    
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
